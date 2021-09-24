@@ -1,0 +1,145 @@
+.homepage_section {
+  background-color: #0b3f64;
+  height: 400px;
+  width: 100%;
+}
+
+.homepage_title {
+  margin-top: 100px;
+  color: #fff;
+}
+.homepage_subtitle {
+  color: #f1c21b;
+}
+.Hero-img {
+  height: 400px;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.dot {
+  height: 190px;
+  width: 190px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0px 4px 30px 10px #6462628a !important;
+}
+.card-row {
+  margin-top: -70px !important;
+}
+.image-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 35px;
+}
+.jain-image {
+  height: 120px;
+}
+.annamalai-image {
+  height: 120px;
+}
+.singhania-image {
+  height: 120px;
+}
+.image-card-annamalai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h2 {
+  position: relative;
+}
+.one {
+  margin-top: 0;
+}
+
+.one:before {
+  content: "";
+  display: block;
+  border-top: solid 2px #0b3f64;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.one span {
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+  color: #0b3f64;
+}
+.bt {
+  background: #0b3f64;
+  color: #fdfdfd;
+  min-height: 40px;
+  width: 124px;
+  margin: 0;
+  border-radius: 5px;
+  border: 0;
+  line-height: 40px;
+  text-align: center;
+  margin: 0.5em 0 0.5em 0;
+  box-shadow: 2px 2px 10px #0b3f64;
+}
+
+a.bt {
+  display: inline;
+  padding: 7px 10px 7px 10px;
+}
+
+.bt:hover {
+  background: #0b3f64;
+}
+
+.homepage_about {
+  background-color: #0b3f64;
+  height: 400px;
+}
+.contact-form-info {
+  display: flex;
+  justify-content: flex-start;
+  color: #0b3f64;
+}
+.contact-form-text {
+  margin-left: 40px;
+}
+
+.contact-form-title {
+  text-align: center;
+  color: #0b3f64;
+}
+.contact-form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form-card {
+  box-shadow: 1px 5px 10px #333;
+}
+.footer {
+  background-color: #0b3f64;
+  height: 250px;
+  margin-top: -130px;
+}
+@media screen and (min-width: 1px) and (max-width: 768px) {
+  .Hero-img {
+    display: none;
+  }
+  .col-margin {
+    margin-bottom: 5%;
+  }
+}

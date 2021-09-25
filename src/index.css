@@ -7,16 +7,16 @@ body {
 }
 
 .Blog-Banner-Image {
-  height: 550px;
+  height: 500px;
   background-position: center;
   background-size: 100%;
 }
 
 .blog_card-banner_title {
-  width: 500px;
-  height: 540px;
+  margin-top: 50px;
+  /* width: 500px; */
   border-radius: 10px;
-  margin-left: 130px;
+  /* margin-left: 130px; */
   box-shadow: 1px 5px 10px rgb(202, 200, 200);
 }
 .blog_card_banner_title_heading {
@@ -26,10 +26,14 @@ body {
 
 .blog_eligibility_block {
   height: 80px;
+  width: 495px;
+  margin-left: -5px;
   background-color: #0b3f64;
   display: flex;
-  justify-content: space-around;
+  position: absolute;
+  justify-content: space-evenly;
   align-items: center;
+  border-radius: 5px;
 }
 .blog_eligibility_title {
   color: #f1c21b;
@@ -46,7 +50,19 @@ body {
   .blog_card-banner_title {
     margin-left: 10px;
     width: 450px;
-    height: 440px;
     margin-top: 20px;
+  }
+  .blog_eligibility_block {
+    height: 80px;
+    width: 446px;
+    margin-left: -15px;
+    background-color: #0b3f64;
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .homepage_cards {
+    margin-left: 100px !important;
   }
 }

@@ -4,6 +4,7 @@ import client from "../client";
 import "./index.css";
 const Home = () => {
   const [posts, setPosts] = useState([]);
+  const [university, setUniversity] = useState([]);
 
   useEffect(() => {
     client
@@ -19,12 +20,34 @@ const Home = () => {
             url
           },
           alt
-        }
+        },
+       
       }`
       )
       .then((data) => setPosts(data))
       .catch(console.error);
   }, []);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "university"]{
+        title,
+        shortdescription,
+        slug,
+        body,
+        mainImage{
+          asset ->{
+            _id,
+            url
+          },
+          alt
+        },
+      }`
+      )
+      .then((data) => setUniversity(data))
+      .catch(console.error);
+  });
 
   return (
     <>
@@ -83,15 +106,61 @@ const Home = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="row">
-              {posts.map((post) => {
+              {posts.map((post, index) => {
                 return (
-                  <div class="card" style={{ width: "18rem", margin: "2%" }}>
+                  <div
+                    className="card homepage_cards"
+                    style={{ width: "18rem", margin: "2%" }}
+                    key={index}
+                  >
                     <img src={post.mainImage.asset.url} alt={post.title} />
-                    <div class="card-body">
-                      <h5 class="card-title">{post.title}</h5>
-                      <p class="card-text">{post.shortdescription}</p>
+                    <div className="card-body">
+                      <h5 className="card-title">{post.title}</h5>
+                      <p className="card-text">{post.shortdescription}</p>
                       <Link
                         to={`/blog/${post.slug.current}`}
+                        className="btn btn-primary"
+                      >
+                        Read Article
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row mt-5">
+        <div className="col-md-12">
+          <main>
+            <h2 className="one">
+              <span>Distance Learning Universities</span>
+            </h2>
+          </main>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="row">
+              {university.map((universities, index) => {
+                return (
+                  <div
+                    className="card homepage_cards"
+                    style={{ width: "18rem", margin: "2%" }}
+                  >
+                    <img
+                      src={universities.mainImage.asset.url}
+                      alt={universities.title}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{universities.title}</h5>
+                      <p className="card-text">
+                        {universities.shortdescription}
+                      </p>
+                      <Link
+                        to={`/blog/${universities.slug.current}`}
                         className="btn btn-primary"
                       >
                         Read Article
@@ -169,61 +238,43 @@ const Home = () => {
             <form>
               <div className="card contact-form-card">
                 <div className="card-body">
-                  <h5 className="contact-form-title">ADMISSION ENQUIRY FORM</h5>
+                  <h5 className="contact-form-title">ADMISSION QNQUIRY FORM</h5>
                   <hr />
                   <h6 className="contact-form-title">
                     Get a callback from our Admission Counsellor{" "}
                   </h6>
                   <div className="row mt-4">
-                    <div className="col-md-6">
-                      <div className="form-group mb-3">
-                        <label>Name</label>
-                        <input type="text" className="form-control" />
-                      </div>
+                    <div classame="form-group mb-3">
+                      <label>Name</label>
+                      <input type="text" className="form-control" />
                     </div>
-                    <div className="col-md-6">
-                      <div className="form-group mb-3">
-                        <label>Email ID</label>
-                        <input type="text" className="form-control" />
-                      </div>
+                    <div className="form-group mb-3 mt-3">
+                      <label>Email ID</label>
+                      <input type="text" className="form-control" />
                     </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group mb-3">
-                        <label>Select Course</label>
-                        <select className="form-control">
-                          <option>Choose...</option>
-                          <option>B.COM</option>
-                          <option>B.B.A</option>
-                          <option>B.C.A</option>
-                          <option>B.SC</option>
-                          <option>B.A</option>
-                        </select>
-                      </div>
+                    <div className="form-group mb-3">
+                      <label>Select Course</label>
+                      <select className="form-control">
+                        <option>Choose...</option>
+                        <option>B.COM</option>
+                        <option>B.B.A</option>
+                        <option>B.C.A</option>
+                        <option>B.SC</option>
+                        <option>B.A</option>
+                      </select>
                     </div>
-                    <div className="col-md-6">
-                      <div className="form-group mb-3">
-                        <label>Select University</label>
-                        <select className="form-control">
-                          <option>Choose...</option>
-                          <option>Jain University</option>
-                          <option>Singhania University</option>
-                          <option>Annamalai University</option>
-                        </select>
-                      </div>
+                    <div className="form-group mb-3">
+                      <label>Select University</label>
+                      <select className="form-control">
+                        <option>Choose...</option>
+                        <option>Jain University</option>
+                        <option>Singhania University</option>
+                        <option>Annamalai University</option>
+                      </select>
                     </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-group mb-3">
-                        <label>Message</label>
-                        <textarea className="form-control" rows="3"></textarea>
-                      </div>
+                    <div className="form-group">
+                      <button className="bt">Submit</button>
                     </div>
-                  </div>
-                  <div className="form-group">
-                    <button className="bt">Submit</button>
                   </div>
                 </div>
               </div>

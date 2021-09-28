@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import LogoImage from "../assets/logo.png";
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ export function Logo(props) {
     <LogoWrapper>
       <LogoImg>
         <Link to="/">
-          <img src="logo.png" alt="EduprovLogo" />
+          <img src={LogoImage} alt="EduprovLogo" />
         </Link>
       </LogoImg>
       <LogoText></LogoText>

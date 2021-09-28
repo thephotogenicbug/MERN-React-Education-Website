@@ -160,7 +160,7 @@ const Home = () => {
                         {universities.shortdescription}
                       </p>
                       <Link
-                        to={`/blog/${universities.slug.current}`}
+                        to={`/universities/${universities.slug.current}`}
                         className="btn btn-primary"
                       >
                         Read Article

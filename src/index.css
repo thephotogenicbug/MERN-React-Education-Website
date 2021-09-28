@@ -41,6 +41,21 @@ body {
 .blog_eligibility_subtitle {
   color: #ffff;
 }
+.universities_banner_image {
+  height: 500px;
+  background-size: contain;
+  background-position: center;
+}
+.universities_card_title {
+  color: #0b3f64;
+}
+.universities_card_course_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+}
 
 @media screen and (min-width: 1px) and (max-width: 768px) {
   .Blog-Banner-Image {

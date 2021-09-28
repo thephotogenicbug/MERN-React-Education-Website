@@ -53,8 +53,13 @@ export default {
       type: "blockContent",
     },
     {
-      name: "eligibility",
-      title: "Eligibility",
+      name: "distancelearning",
+      title: "Distance Learning Programs",
+      type: "string",
+    },
+    {
+      name: "distancelearningcourseone",
+      title: "Distance Learning Course One",
       type: "string",
     },
   ],

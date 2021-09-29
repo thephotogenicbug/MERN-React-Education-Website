@@ -56,7 +56,41 @@ body {
   font-weight: bold;
   font-size: 24px;
 }
-
+.contact_form_img {
+  height: 300px;
+}
+.contact-form-row {
+  margin-left: 1px;
+}
+.contact_form_label {
+  font-weight: bold;
+  color: #0b3f64;
+}
+.contact_img {
+  height: 250px;
+}
+.Img {
+  background-image: url(../src/Components/assets/about.png);
+  height: 520px;
+  background-size: 100%;
+  background-position: center;
+}
+.about_card-banner_title {
+  margin-top: -30px;
+  /* width: 500px; */
+  border-radius: 10px;
+  /* margin-left: 130px; */
+  box-shadow: 1px 5px 10px rgb(202, 200, 200);
+}
+.about_card-body_title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_logo {
+  height: 100px;
+}
 @media screen and (min-width: 1px) and (max-width: 768px) {
   .Blog-Banner-Image {
     height: 300px;
@@ -79,5 +113,8 @@ body {
   }
   .homepage_cards {
     margin-left: 100px !important;
+  }
+  .contact_img {
+    height: 240px;
   }
 }

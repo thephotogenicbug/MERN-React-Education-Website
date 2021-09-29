@@ -63,7 +63,13 @@ const Universities = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-3"></div>
+                    <div className="col-md-3">
+                      <div className="card">
+                        <div className="card-body universities_card_course_title">
+                          {singlePost.distancelearningcourseone}
+                        </div>
+                      </div>
+                    </div>
                     <div className="col-md-3"></div>
                     <div className="col-md-3"></div>
                   </div>

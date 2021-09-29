@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 const Blog = () => {
@@ -29,7 +29,6 @@ const Blog = () => {
 
     setIsLoading(false);
   }, [slug]);
-
 
   return (
     <>

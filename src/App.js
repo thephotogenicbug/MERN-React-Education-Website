@@ -10,6 +10,7 @@ import JainUniversity from "./Pages/JainUniversity";
 import AnnamalaiUniversity from "./Pages/AnnamalaiUniversity";
 import SinghaniaUniversity from "./Pages/SinghaniaUniversity";
 import FeesData from "./Pages/FeesData";
+import Footer from "./Pages/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/fees/:id' component ={FeesData} />
       <Route exact path="/contactus" component={ContactUs} />
       <Route exact path="/about" component={About} />
+      <Footer />
     </BrowserRouter>
   );
 }

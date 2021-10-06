@@ -142,4 +142,8 @@ a.bt {
   .col-margin {
     margin-bottom: 5%;
   }
+  .homepage_about {
+    background-color: #0b3f64;
+    height: 500px;
+  }
 }

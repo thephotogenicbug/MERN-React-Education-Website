@@ -8,7 +8,8 @@ const SinghaniaUniversity = () => {
   const [dataitem, updateData] = useState([]);
   const getData = () => {
     const url =
-      "https://distance-api-url.herokuapp.com/applicationform/getsinghaniauniversity";
+      // "https://distance-api-url.herokuapp.com/applicationform/getsinghaniauniversity";
+      "http://localhost:5000/applicationform/getsinghaniauniversity";
     fetch(url)
       .then((response) => response.json())
       .then((result) => updateData(result));
@@ -112,7 +113,7 @@ const SinghaniaUniversity = () => {
                             <h6 className="text-center">{data.spec}</h6>
                           </div>
                           <div className="text-center  mb-3">
-                            <Link to={`/fees/${data._id}`}>
+                            <Link to={`/fees/${data._id}`} style={{textDecoration:'none'}}>
                               Fee Structure
                             </Link>
                           </div>

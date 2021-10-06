@@ -37,18 +37,6 @@ const JainUniversity = () => {
                   athletics, world university rankings to international
                   recognitions.
                 </p>
-                <p>
-                  Besides career development, we also develop individuals
-                  professionally to think on their feet and challenge complex
-                  questions through entrepreneurial engagement. With a wide
-                  network capability, JAIN (Deemed-to-be University) stands tall
-                  and competent addressing grand questions through its
-                  innovative history without compromising on grassroot solutions
-                  and standards. With five thriving campuses spread across the
-                  city, it has notched success across fields from academics to
-                  athletics, world university rankings to international
-                  recognitions.
-                </p>
                 <label>Our Vision</label>
                 <br />
                 <p>

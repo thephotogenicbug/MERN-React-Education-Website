@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import client from "../client";
 import "./index.css";
+import Jain from "../Components/assets/Jain.jpg";
+import Singhania from "../Components/assets/singhania.jpg";
+import Annamalai from "../Components/assets/annamalai.jpg";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [university, setUniversity] = useState([]);
@@ -143,32 +146,65 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="row">
-              {university.map((universities, index) => {
-                return (
-                  <div
-                    className="card homepage_cards"
-                    style={{ width: "18rem", margin: "2%" }}
-                  >
-                    <img
-                      src={universities.mainImage.asset.url}
-                      alt={universities.title}
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title">{universities.title}</h5>
-                      <p className="card-text">
-                        {universities.shortdescription}
-                      </p>
-                      <Link
-                        to={`/universities/${universities.slug.current}`}
-                        className="btn btn-primary"
-                      >
-                        Read Article
-                      </Link>
-                    </div>
+            <div className="row mt-4">
+              <div className="col-md-4">
+                <div
+                  className="card homepage_cards"
+                  style={{ width: "20rem", margin: "1%" }}
+                >
+                  <img src={Jain} alt="Jain University" />
+                  <div className="card-body">
+                    <h5 className="card-title">Jain University</h5>
+                    <p className="card-text">
+                      JAIN (Deemed-to-be University) stands above the curve pan
+                      India. Over three decades, we place academic commitment
+                      and career achievement
+                    </p>
+                    <Link to="/jainuniversity" className="btn btn-primary">
+                      Read Article
+                    </Link>
                   </div>
-                );
-              })}
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div
+                  className="card homepage_cards"
+                  style={{ width: "20rem", margin: "1%" }}
+                >
+                  <img src={Singhania} alt="Singhania University" />
+                  <div className="card-body">
+                    <h5 className="card-title">Singhania University</h5>
+                    <p className="card-text">
+                      Singhania University is situated at Pacheri Bari, Distt.
+                      Jhunjhunu (Rajasthan) on the Delhi-Narnaul Singhana -
+                      Pilani Road. It is about 160 kms. west of Delhi and about
+                      165 kms.
+                    </p>
+                    <Link to="/singhaniaUniversity" className="btn btn-primary">
+                      Read Article
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div
+                  className="card homepage_cards"
+                  style={{ width: "20rem", margin: "1%", height:'24.3rem' }}
+                >
+                  <img src={Annamalai} alt="Singhania University" />
+                  <div className="card-body">
+                    <h5 className="card-title">Annamalai University</h5>
+                    <p className="card-text">
+                      Annamalai University, accredited with ‘A’ Grade by NAAC in
+                      2014, is one of India’s largest public residential
+                      universities with 10 Faculties 
+                    </p>
+                    <Link to="/singhaniaUniversity" className="btn btn-primary">
+                      Read Article
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -203,7 +239,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="container mt-5">
+      {/* <div className="container mt-5">
         <div className="row">
           <div className="col-md-6">
             <h3>GET IN TOUCH</h3>
@@ -282,12 +318,7 @@ const Home = () => {
             <div className="mb-5"></div>
           </div>
         </div>
-      </div>
-      <section className="footer">
-        <div className="container">
-          <div className="row"></div>
-        </div>
-      </section>
+      </div> */}
     </>
   );
 };

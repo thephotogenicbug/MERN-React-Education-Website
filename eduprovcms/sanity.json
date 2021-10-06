@@ -1,18 +1,17 @@
 {
   "root": true,
   "project": {
-    "name": "eduprovblogproject"
+    "name": "eduprovcms"
   },
   "api": {
-    "projectId": "x5w0jomo",
+    "projectId": "hhzmd8lt",
     "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "datatable"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {

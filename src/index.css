@@ -54,8 +54,23 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 24px;
+  flex-flow: row wrap !important;
+  margin: 2rem;
 }
+
+.universities_card_course_title_annamalai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-flow: row wrap !important;
+  height: 120px;
+}
+.universities_card_annamalai {
+  border-radius: 12px !important;
+}
+
+
 .contact_form_img {
   height: 300px;
 }

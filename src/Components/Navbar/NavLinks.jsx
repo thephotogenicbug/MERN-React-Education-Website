@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link as Links } from "react-router-dom";
 const NavLinksContainer = styled.div`
   height: 100%;
   display: flex;
@@ -40,19 +41,32 @@ export function NavLinks(props) {
     <NavLinksContainer>
       <LinksWrapper>
         <LinkItem>
-          <Link href="/">Home</Link>
+          <Links to="/" style={{ textDecoration: "none", color: "#000" }}>
+            <Link>Home</Link>
+          </Links>
         </LinkItem>
         <LinkItem>
-          <Link href="/">About us</Link>
+          <Links to="/about" style={{ textDecoration: "none", color: "#000" }}>
+            <Link>About us</Link>
+          </Links>
         </LinkItem>
         <LinkItem>
-          <Link href="/">Academics</Link>
+          <Links style={{ textDecoration: "none", color: "#000" }}>
+            <Link href="/">Academics</Link>
+          </Links>
         </LinkItem>
         <LinkItem>
-          <Link href="/">Courses</Link>
+          <Links style={{ textDecoration: "none", color: "#000" }}>
+            <Link href="/">Courses</Link>
+          </Links>
         </LinkItem>
         <LinkItem>
-          <Link href="/">Contact us</Link>
+          <Links
+            to="/contactus"
+            style={{ textDecoration: "none", color: "#000" }}
+          >
+            <Link href="/contactus">Contact us</Link>
+          </Links>
         </LinkItem>
       </LinksWrapper>
     </NavLinksContainer>

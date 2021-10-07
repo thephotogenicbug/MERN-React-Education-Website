@@ -96,14 +96,36 @@ const Footer = () => {
                   {" "}
                   <i className="fa fa-chevron-right text-yellow-500"></i>
                   <a
-                    href="#"
+                    href="/jainuniversity"
                     className="hover:text-yellow-500 text-gray-300"
                     style={{ textDecoration: "none" }}
                   >
-                    Sample
+                    Jain University
                   </a>{" "}
                 </li>
                 <li className="pb-4">
+                  {" "}
+                  <i className="fa fa-chevron-right text-yellow-500"></i>
+                  <a
+                    href="/singhaniaUniversity"
+                    className="hover:text-yellow-500 text-gray-300"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Singhania University
+                  </a>{" "}
+                </li>
+                <li className="pb-4">
+                  {" "}
+                  <i className="fa fa-chevron-right text-yellow-500"></i>
+                  <a
+                    href="/annamalaiuniversity"
+                    className="hover:text-yellow-500 text-gray-300"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Annamalai University
+                  </a>{" "}
+                </li>
+                {/* <li className="pb-4">
                   {" "}
                   <i className="fa fa-chevron-right text-yellow-500"></i>
                   <a
@@ -135,29 +157,7 @@ const Footer = () => {
                   >
                     Sample
                   </a>{" "}
-                </li>
-                <li className="pb-4">
-                  {" "}
-                  <i className="fa fa-chevron-right text-yellow-500"></i>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-500 text-gray-300"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Sample
-                  </a>{" "}
-                </li>
-                <li className="pb-4">
-                  {" "}
-                  <i className="fa fa-chevron-right text-yellow-500"></i>
-                  <a
-                    href="#"
-                    className="hover:text-yellow-500 text-gray-300"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Sample
-                  </a>{" "}
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="md-5">
@@ -165,7 +165,7 @@ const Footer = () => {
               <form className="flex flex-row flex-wrap">
                 <input
                   type="text"
-                  className="text-gray-500 w-2/3 p-2 focus:border-yellow-500"
+                  className="text-gray-500 w-2/3 p-2 focus:border-yellow-500 focus:outline-none"
                   placeholder="Email"
                 />
                 <button className="p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow">
@@ -182,13 +182,17 @@ const Footer = () => {
             <div>
               Copyright{" "}
               <strong>
-                <span>Eduprov</span>
+                <span>Eduprov 2021</span>
               </strong>
               . All Rights Reserved
             </div>
             <div>
               Designed by{" "}
-              <a href="#" className="text-yellow-500">
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://thephotogenicbug.in/"
+                className="text-yellow-500 hover:text-yellow-500"
+              >
                 thephotogenicbug
               </a>
             </div>

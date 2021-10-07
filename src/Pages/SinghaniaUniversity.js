@@ -3,6 +3,28 @@ import { useParams } from "react-router";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+
+const RegisterButton = styled.button`
+  border: 0;
+  width: 120px;
+  outline: 0;
+  padding: 8px 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: #0b3f64;
+  transition: all 240ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #0b3f64;
+  }
+  &:not(:last-of-type) {
+    margin-right: 6px;
+  }
+`;
 
 const SinghaniaUniversity = () => {
   const [dataitem, updateData] = useState([]);
@@ -113,8 +135,11 @@ const SinghaniaUniversity = () => {
                             <h6 className="text-center">{data.spec}</h6>
                           </div>
                           <div className="text-center  mb-3">
-                            <Link to={`/fees/${data._id}`} style={{textDecoration:'none'}}>
-                              Fee Structure
+                            <Link
+                              to={`/fees/${data._id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <RegisterButton>Fees Structure</RegisterButton>
                             </Link>
                           </div>
                         </div>
@@ -122,6 +147,53 @@ const SinghaniaUniversity = () => {
                     );
                   })}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="mymodal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-md ">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  Update Follow Up
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div className="modal-body">
+               
+              
+              </div>
+
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-primary btn-sm"
+                 
+                >
+                  Update Now
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-danger btn-sm"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>

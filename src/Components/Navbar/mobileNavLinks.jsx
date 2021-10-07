@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Accessibility } from "./accessibility";
 import { MenuToggle } from "./menuToggle";
+import { Link as Links } from "react-router-dom";
 
 const NavLinksContainer = styled.div`
   height: 100%;
@@ -19,7 +20,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 65px;
+  top: 60px;
   left: 0;
   z-index: 1000;
 `;
@@ -53,10 +54,35 @@ export function MobileNavLinks(props) {
       {isOpen && (
         <LinksWrapper>
           <LinkItem>
-            <Link href="/profile">Profile</Link>
+            <Links to="/" style={{ textDecoration: "none", color: "#000" }}>
+              <Link>Home</Link>
+            </Links>
           </LinkItem>
           <LinkItem>
-            <Link href="/application">Application Form</Link>
+            <Links
+              to="/about"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <Link>About us</Link>
+            </Links>
+          </LinkItem>
+          <LinkItem>
+            <Links style={{ textDecoration: "none", color: "#000" }}>
+              <Link href="/">Academics</Link>
+            </Links>
+          </LinkItem>
+          <LinkItem>
+            <Links style={{ textDecoration: "none", color: "#000" }}>
+              <Link href="/">Courses</Link>
+            </Links>
+          </LinkItem>
+          <LinkItem>
+            <Links
+              to="/contactus"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <Link href="/contactus">Contact us</Link>
+            </Links>
           </LinkItem>
           <Marginer />
           <Accessibility />

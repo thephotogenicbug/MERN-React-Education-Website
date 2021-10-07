@@ -11,6 +11,7 @@ import AnnamalaiUniversity from "./Pages/AnnamalaiUniversity";
 import SinghaniaUniversity from "./Pages/SinghaniaUniversity";
 import FeesData from "./Pages/FeesData";
 import Footer from "./Pages/Footer";
+import ApplicationForm from "./Pages/ApplicationForm";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route exact path='/fees/:id' component ={FeesData} />
       <Route exact path="/contactus" component={ContactUs} />
       <Route exact path="/about" component={About} />
+      <Route exact path='/application' component={ApplicationForm} />
       <Footer />
     </BrowserRouter>
   );

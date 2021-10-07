@@ -17,7 +17,6 @@ body {
   /* width: 500px; */
   border-radius: 10px;
   /* margin-left: 130px; */
-
 }
 .blog_card_banner_title_heading {
   font-size: 14px !important;
@@ -70,7 +69,6 @@ body {
   border-radius: 12px !important;
 }
 
-
 .contact_form_img {
   height: 300px;
 }
@@ -106,6 +104,7 @@ body {
 .about_logo {
   height: 100px;
 }
+
 @media screen and (min-width: 1px) and (max-width: 768px) {
   .Blog-Banner-Image {
     height: 300px;

@@ -5,6 +5,28 @@ import "./index.css";
 import Jain from "../Components/assets/Jain.jpg";
 import Singhania from "../Components/assets/singhania.jpg";
 import Annamalai from "../Components/assets/annamalai.jpg";
+import styled from "styled-components";
+
+const RegisterButton = styled.button`
+  border: 0;
+  width: 120px;
+  outline: 0;
+  padding: 8px 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: #0b3f64;
+  transition: all 240ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #0b3f64;
+  }
+  &:not(:last-of-type) {
+    margin-right: 6px;
+  }
+`;
+
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [university, setUniversity] = useState([]);
@@ -120,11 +142,8 @@ const Home = () => {
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.shortdescription}</p>
-                      <Link
-                        to={`/blog/${post.slug.current}`}
-                        className="btn btn-primary"
-                      >
-                        Read Article
+                      <Link to={`/blog/${post.slug.current}`}>
+                        <RegisterButton></RegisterButton>
                       </Link>
                     </div>
                   </div>
@@ -133,16 +152,18 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="row mt-5">
-        <div className="col-md-12">
-          <main>
+
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <main>
             <h2 className="one">
-              <span>Distance Learning Universities</span>
+              <span>Top Distance Learning Universities</span>
             </h2>
           </main>
+          </div>
         </div>
       </div>
+
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -160,8 +181,8 @@ const Home = () => {
                       India. Over three decades, we place academic commitment
                       and career achievement
                     </p>
-                    <Link to="/jainuniversity" className="btn btn-primary">
-                      Read Article
+                    <Link to="/jainuniversity">
+                      <RegisterButton>Read Article</RegisterButton>
                     </Link>
                   </div>
                 </div>
@@ -180,8 +201,8 @@ const Home = () => {
                       Pilani Road. It is about 160 kms. west of Delhi and about
                       165 kms.
                     </p>
-                    <Link to="/singhaniaUniversity" className="btn btn-primary">
-                      Read Article
+                    <Link to="/singhaniaUniversity">
+                      <RegisterButton>Read Article</RegisterButton>
                     </Link>
                   </div>
                 </div>
@@ -189,7 +210,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div
                   className="card homepage_cards"
-                  style={{ width: "20rem", margin: "1%", height:'24.3rem' }}
+                  style={{ width: "20rem", margin: "1%", height: "24.3rem" }}
                 >
                   <img src={Annamalai} alt="Singhania University" />
                   <div className="card-body">
@@ -197,10 +218,10 @@ const Home = () => {
                     <p className="card-text">
                       Annamalai University, accredited with ‘A’ Grade by NAAC in
                       2014, is one of India’s largest public residential
-                      universities with 10 Faculties 
+                      universities with 10 Faculties
                     </p>
-                    <Link to="/singhaniaUniversity" className="btn btn-primary">
-                      Read Article
+                    <Link to="/singhaniaUniversity">
+                      <RegisterButton>Read Article</RegisterButton>
                     </Link>
                   </div>
                 </div>
@@ -239,86 +260,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-6">
-            <h3>GET IN TOUCH</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </p>
-
-            <div className="mb-4">
-              <p className="contact-form-info">
-                <i class="far fa-envelope fa-2x"></i>{" "}
-                <span className="contact-form-text">admin@eduprov.com</span>
-              </p>
-            </div>
-            <div className="mb-4">
-              <p className="contact-form-info">
-                <i class="fas fa-phone-alt fa-2x"></i>{" "}
-                <span className="contact-form-text">+91 80 25591146</span>
-              </p>
-            </div>
-            <div className="mb-3">
-              <p className="contact-form-info">
-                <i class="fas fa-map-marker-alt fa-2x"></i>{" "}
-                <span className="contact-form-text">
-                  No 20 2nd Floor Lady Curzon Rd Santha Complex, Lady Curzon Rd,
-                  Infantry Rd, Bengaluru Karnataka 560001
-                </span>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <form>
-              <div className="card contact-form-card">
-                <div className="card-body">
-                  <h5 className="contact-form-title">ADMISSION QNQUIRY FORM</h5>
-                  <hr />
-                  <h6 className="contact-form-title">
-                    Get a callback from our Admission Counsellor{" "}
-                  </h6>
-                  <div className="row mt-4">
-                    <div classame="form-group mb-3">
-                      <label>Name</label>
-                      <input type="text" className="form-control" />
-                    </div>
-                    <div className="form-group mb-3 mt-3">
-                      <label>Email ID</label>
-                      <input type="text" className="form-control" />
-                    </div>
-                    <div className="form-group mb-3">
-                      <label>Select Course</label>
-                      <select className="form-control">
-                        <option>Choose...</option>
-                        <option>B.COM</option>
-                        <option>B.B.A</option>
-                        <option>B.C.A</option>
-                        <option>B.SC</option>
-                        <option>B.A</option>
-                      </select>
-                    </div>
-                    <div className="form-group mb-3">
-                      <label>Select University</label>
-                      <select className="form-control">
-                        <option>Choose...</option>
-                        <option>Jain University</option>
-                        <option>Singhania University</option>
-                        <option>Annamalai University</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <button className="bt">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div className="mb-5"></div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

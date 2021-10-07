@@ -199,25 +199,32 @@ const Footer = () => {
           </div>
           <div className="text-center text-xl  mb-2">
             <a
-              href="#"
+              href="https://twitter.com/eduprov"
               className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1 text-white"
             >
               {" "}
               <i className="fab fa-twitter"></i>{" "}
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/eduprovinstitute/"
               className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1 text-white"
             >
               {" "}
               <i className="fab fa-facebook"></i>{" "}
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/eduprov_education/"
               className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1 text-white"
             >
               {" "}
               <i className="fab fa-instagram"></i>{" "}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eduprov-educational-institute-ab2b24115/"
+              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1 text-white"
+            >
+              {" "}
+              <i className="fab fa-linkedin"></i>{" "}
             </a>
           </div>
         </div>

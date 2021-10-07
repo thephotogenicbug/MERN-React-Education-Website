@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import styled, { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -127,6 +128,42 @@ const RegisterButton = styled.button`
 `;
 
 const ApplicationForm = () => {
+  const [name, pickName] = useState("");
+  const [email, pickEmail] = useState("");
+  const [mobile, pickMobile] = useState("");
+  const [dob, pickDob] = useState("");
+  const [gender, pickGender] = useState("");
+  const [fathername, pickFathername] = useState("");
+  const [mothername, pickMothername] = useState("");
+  const [examname, pickExamname] = useState("");
+  const [universityname, pickUniversityname] = useState("");
+  const [schoolname, pickSchoolname] = useState("");
+  const [passingyear, pickPassingyear] = useState("");
+  const [percentage, pickPercentage] = useState("");
+  const [address, pickAddress] = useState("");
+
+   const Submit = (e) => {
+      e.preventDefault()
+     const url = "http://localhost:5000/application/applicationform";
+     const input = { name, email, mobile, dob, gender, fathername, mothername, examname, universityname, schoolname, passingyear, percentage, address };
+     axios.post(url, input).then((response) => {
+       pickName("");
+       pickEmail("");
+       pickMobile("");
+       pickDob("");
+       pickGender("");
+       pickFathername("");
+       pickMothername("");
+       pickExamname("");
+       pickUniversityname("");
+       pickSchoolname("");
+       pickPassingyear("");
+       pickPercentage("");
+       pickAddress("")
+      
+     });
+   };
+
   return (
     <>
       <GlobalStyle />
@@ -136,39 +173,84 @@ const ApplicationForm = () => {
           <hr style={{ background: "#F1C21B", height: "2px" }} />
           <StyledInput
             type="text"
-            placeholder="Name"
-            //   value={name}
-            //   onChange={(e) => setName(e.target.value)}
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => pickName(e.target.value)}
           />
           <StyledInput
             type="email"
             placeholder="Email"
-            //   value={mobile}
-            //   onChange={(e) => setMobile(e.target.value)}
+            value={email}
+            onChange={(e) => pickEmail(e.target.value)}
           />
           <StyledInput
             type="number"
             placeholder="Mobile No "
-            //   value={unique}
-            //   onChange={(e) => setUnique(e.target.value)}
+            value={mobile}
+            onChange={(e) => pickMobile(e.target.value)}
           />
           <StyledInput
             type="text"
             placeholder="DOB"
-            //   value={department}
-            //   onChange={(e) => setDepartment(e.target.value)}
+            value={dob}
+            onChange={(e) => pickDob(e.target.value)}
           />
-          <StyledInput type="text" placeholder="Gender" />
-          <StyledInput type="text" placeholder="Father Name" />
-          <StyledInput type="text" placeholder="Mother Name" />
-          <StyledInput type="text" placeholder="Name of Exam" />
-          <StyledInput type="text" placeholder="Name of University" />
-          <StyledInput type="text" placeholder="Name of School" />
-          <StyledInput type="text" placeholder="Year of Passing" />
-          <StyledInput type="text" placeholder="Percentage" />
-          <StyledTextArea type="text" placeholder="Address" />
+          <StyledInput
+            type="text"
+            placeholder="Gender"
+            value={gender}
+            onChange={(e) => pickGender(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Father Name"
+            value={fathername}
+            onChange={(e) => pickFathername(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Mother Name"
+            value={mothername}
+            onChange={(e) => pickMothername(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Name of Exam"
+            value={examname}
+            onChange={(e) => pickExamname(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Name of University"
+            value={universityname}
+            onChange={(e) => pickUniversityname(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Name of School"
+            value={schoolname}
+            onChange={(e) => pickSchoolname(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Year of Passing"
+            value={passingyear}
+            onChange={(e) => pickPassingyear(e.target.value)}
+          />
+          <StyledInput
+            type="text"
+            placeholder="Percentage"
+            value={percentage}
+            onChange={(e) => pickPercentage(e.target.value)}
+          />
+          <StyledTextArea
+            type="text"
+            placeholder="Address"
+            value={address}
+            onChange={(e) => pickAddress(e.target.value)}
+          />
           <StyledError>{/* <p>Error message here</p> */}</StyledError>
-          <StyledButton>Submit</StyledButton>
+          <StyledButton onClick={Submit}>Submit</StyledButton>
           {/* {loading ? (
               <StyledSpinner viewBox="0 0 50 50">
                 <circle

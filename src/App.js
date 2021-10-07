@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/blog/:slug" component={Blog} />
-      <Route exact path="/jainuniversity" component={JainUniversity} />
+      {/* <Route exact path="/jainuniversity" component={JainUniversity} /> */}
       <Route exact path='/annamalaiuniversity' component={AnnamalaiUniversity} />
       <Route exact path='/singhaniaUniversity' component={SinghaniaUniversity} />
       <Route exact path='/fees/:id' component ={FeesData} />

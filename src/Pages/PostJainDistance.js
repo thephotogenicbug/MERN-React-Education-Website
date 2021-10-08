@@ -142,51 +142,41 @@ const StyledInputFile = styled.input`
 
 const PostJainDistance = () => {
   const [name, pickName] = useState("");
-  const [email, pickEmail] = useState("");
-  const [mobile, pickMobile] = useState("");
-  const [dob, pickDob] = useState("");
-  const [gender, pickGender] = useState("");
-  const [fathername, pickFathername] = useState("");
-  const [mothername, pickMothername] = useState("");
-  const [examname, pickExamname] = useState("");
-  const [universityname, pickUniversityname] = useState("");
-  const [schoolname, pickSchoolname] = useState("");
-  const [passingyear, pickPassingyear] = useState("");
-  const [percentage, pickPercentage] = useState("");
-  const [address, pickAddress] = useState("");
+  const [duration, pickDuration] = useState("")
+  const [firstyear, pickFirstYear] = useState("")
+  const [secondyear, pickSecondYear] = useState("")
+  const [thirdyear, pickThirdYear] = useState("")
+  const [examfee, pickExamFee] = useState("")
+  const [fees, pickFees] = useState("")
+  const [fees2, pickFees2] = useState("")
+  const [totalfee, pickTotalFee] = useState("")
+
+//   http://localhost:5000/jaindistance/createjaindistance
 
   const Submit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/application/applicationform";
+    const url = "http://localhost:5000/jaindistance/createjaindistance";
     const input = {
       name,
-      email,
-      mobile,
-      dob,
-      gender,
-      fathername,
-      mothername,
-      examname,
-      universityname,
-      schoolname,
-      passingyear,
-      percentage,
-      address,
+      duration,
+      firstyear,
+      secondyear,
+      thirdyear,
+      examfee,
+      fees,
+      fees2,
+      totalfee
     };
     axios.post(url, input).then((response) => {
       pickName("");
-      pickEmail("");
-      pickMobile("");
-      pickDob("");
-      pickGender("");
-      pickFathername("");
-      pickMothername("");
-      pickExamname("");
-      pickUniversityname("");
-      pickSchoolname("");
-      pickPassingyear("");
-      pickPercentage("");
-      pickAddress("");
+      pickDuration("")
+      pickFirstYear("")
+      pickSecondYear("")
+      pickThirdYear("")
+      pickExamFee("")
+      pickFees("")
+      pickFees2("")
+      pickTotalFee("")
     });
   };
 
@@ -199,88 +189,58 @@ const PostJainDistance = () => {
           <hr style={{ background: "#F1C21B", height: "2px" }} />
           <StyledInput
             type="text"
-            placeholder="Full Name"
+            placeholder="Course Name"
             value={name}
             onChange={(e) => pickName(e.target.value)}
           />
           <StyledInput
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => pickEmail(e.target.value)}
-          />
-          <StyledInput
-            type="number"
-            placeholder="Mobile No "
-            value={mobile}
-            onChange={(e) => pickMobile(e.target.value)}
+            type="text"
+            placeholder="Duration"
+            value={duration}
+            onChange={(e) => pickDuration(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="DOB"
-            value={dob}
-            onChange={(e) => pickDob(e.target.value)}
+            placeholder="First Year "
+            value={firstyear}
+            onChange={(e) => pickFirstYear(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Gender"
-            value={gender}
-            onChange={(e) => pickGender(e.target.value)}
+            placeholder="Second Year"
+            value={secondyear}
+            onChange={(e) => pickSecondYear(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Father Name"
-            value={fathername}
-            onChange={(e) => pickFathername(e.target.value)}
+            placeholder="Third Year"
+            value={thirdyear}
+            onChange={(e) => pickThirdYear(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Mother Name"
-            value={mothername}
-            onChange={(e) => pickMothername(e.target.value)}
+            placeholder="Exam Fees "
+            value={examfee}
+            onChange={(e) => pickExamFee(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Name of Exam"
-            value={examname}
-            onChange={(e) => pickExamname(e.target.value)}
+            placeholder="Fees "
+            value={fees}
+            onChange={(e) => pickFees(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Name of University"
-            value={universityname}
-            onChange={(e) => pickUniversityname(e.target.value)}
+            placeholder="Fees 2"
+            value={fees2}
+            onChange={(e) => pickFees2(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Name of School"
-            value={schoolname}
-            onChange={(e) => pickSchoolname(e.target.value)}
+            placeholder="Total Fees"
+            value={totalfee}
+            onChange={(e) => pickTotalFee(e.target.value)}
           />
-          <StyledInput
-            type="text"
-            placeholder="Year of Passing"
-            value={passingyear}
-            onChange={(e) => pickPassingyear(e.target.value)}
-          />
-          <StyledInput
-            type="text"
-            placeholder="Percentage"
-            value={percentage}
-            onChange={(e) => pickPercentage(e.target.value)}
-          />
-          <StyledTextArea
-            type="text"
-            placeholder="Address"
-            value={address}
-            onChange={(e) => pickAddress(e.target.value)}
-          />
-          {/* <StyledInputFile
-            type="file"
-            placeholder="Percentage"
-            value={percentage}
-            onChange={(e) => pickPercentage(e.target.value)}
-          /> */}
           <StyledError>{/* <p>Error message here</p> */}</StyledError>
           <StyledButton onClick={Submit}>Submit</StyledButton>
           {/* {loading ? (

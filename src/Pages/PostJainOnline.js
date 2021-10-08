@@ -141,52 +141,39 @@ const StyledInputFile = styled.input`
 `;
 
 const PostJainOnline = () => {
-  const [name, pickName] = useState("");
-  const [email, pickEmail] = useState("");
-  const [mobile, pickMobile] = useState("");
-  const [dob, pickDob] = useState("");
-  const [gender, pickGender] = useState("");
-  const [fathername, pickFathername] = useState("");
-  const [mothername, pickMothername] = useState("");
-  const [examname, pickExamname] = useState("");
-  const [universityname, pickUniversityname] = useState("");
-  const [schoolname, pickSchoolname] = useState("");
-  const [passingyear, pickPassingyear] = useState("");
-  const [percentage, pickPercentage] = useState("");
-  const [address, pickAddress] = useState("");
+  
+    const [name, pickName] = useState("")
+    const [specialization, pickSpecialization] = useState("")
+    const [spartner, pickSpartner] = useState("")
+    const [cpartner, pickCpartner] = useState("")
+    const [firstyear, pickFirstYear] = useState("")
+    const [secondyear, pickSecondYear] = useState("");
+    const [thirdyear, pickThirdYear] = useState("");
+
+
+
+//   http://localhost:5000/jainonline/createjainonline
 
   const Submit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/application/applicationform";
+    const url = "http://localhost:5000/jainonline/createjainonline";
     const input = {
       name,
-      email,
-      mobile,
-      dob,
-      gender,
-      fathername,
-      mothername,
-      examname,
-      universityname,
-      schoolname,
-      passingyear,
-      percentage,
-      address,
-    };
+     specialization,
+     spartner,
+     cpartner,
+     firstyear,
+     secondyear,
+     thirdyear,
+    }
     axios.post(url, input).then((response) => {
       pickName("");
-      pickEmail("");
-      pickMobile("");
-      pickDob("");
-      pickGender("");
-      pickFathername("");
-      pickMothername("");
-      pickExamname("");
-      pickUniversityname("");
-      pickSchoolname("");
-      pickPassingyear("");
-      pickPercentage("");
-      pickAddress("");
+      pickSpecialization("")
+      pickSpartner("")
+      pickCpartner("")
+      pickFirstYear("")
+      pickSecondYear("")
+      pickThirdYear("")
     });
   };
 
@@ -199,88 +186,46 @@ const PostJainOnline = () => {
           <hr style={{ background: "#F1C21B", height: "2px" }} />
           <StyledInput
             type="text"
-            placeholder="Full Name"
+            placeholder="Course Name"
             value={name}
             onChange={(e) => pickName(e.target.value)}
           />
           <StyledInput
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => pickEmail(e.target.value)}
-          />
-          <StyledInput
-            type="number"
-            placeholder="Mobile No "
-            value={mobile}
-            onChange={(e) => pickMobile(e.target.value)}
+            type="text"
+            placeholder="Specialization"
+            value={specialization}
+            onChange={(e) => pickSpecialization(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="DOB"
-            value={dob}
-            onChange={(e) => pickDob(e.target.value)}
+            placeholder="Spartner "
+            value={spartner}
+            onChange={(e) => pickSpartner(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Gender"
-            value={gender}
-            onChange={(e) => pickGender(e.target.value)}
+            placeholder="Channel Partner"
+            value={cpartner}
+            onChange={(e) => pickCpartner(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Father Name"
-            value={fathername}
-            onChange={(e) => pickFathername(e.target.value)}
+            placeholder="First Year"
+            value={firstyear}
+            onChange={(e) => pickFirstYear(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Mother Name"
-            value={mothername}
-            onChange={(e) => pickMothername(e.target.value)}
+            placeholder="Second Year"
+            value={secondyear}
+            onChange={(e) => pickSecondYear(e.target.value)}
           />
           <StyledInput
             type="text"
-            placeholder="Name of Exam"
-            value={examname}
-            onChange={(e) => pickExamname(e.target.value)}
+            placeholder="Third Year"
+            value={thirdyear}
+            onChange={(e) => pickThirdYear(e.target.value)}
           />
-          <StyledInput
-            type="text"
-            placeholder="Name of University"
-            value={universityname}
-            onChange={(e) => pickUniversityname(e.target.value)}
-          />
-          <StyledInput
-            type="text"
-            placeholder="Name of School"
-            value={schoolname}
-            onChange={(e) => pickSchoolname(e.target.value)}
-          />
-          <StyledInput
-            type="text"
-            placeholder="Year of Passing"
-            value={passingyear}
-            onChange={(e) => pickPassingyear(e.target.value)}
-          />
-          <StyledInput
-            type="text"
-            placeholder="Percentage"
-            value={percentage}
-            onChange={(e) => pickPercentage(e.target.value)}
-          />
-          <StyledTextArea
-            type="text"
-            placeholder="Address"
-            value={address}
-            onChange={(e) => pickAddress(e.target.value)}
-          />
-          {/* <StyledInputFile
-            type="file"
-            placeholder="Percentage"
-            value={percentage}
-            onChange={(e) => pickPercentage(e.target.value)}
-          /> */}
           <StyledError>{/* <p>Error message here</p> */}</StyledError>
           <StyledButton onClick={Submit}>Submit</StyledButton>
           {/* {loading ? (

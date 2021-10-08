@@ -220,7 +220,7 @@ const Home = () => {
                       2014, is one of India’s largest public residential
                       universities with 10 Faculties
                     </p>
-                    <Link to="/singhaniaUniversity">
+                    <Link to="/annamalaiuniversity">
                       <RegisterButton>Read Article</RegisterButton>
                     </Link>
                   </div>

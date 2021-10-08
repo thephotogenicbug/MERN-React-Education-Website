@@ -50,7 +50,7 @@ export function NavLinks(props) {
             <Link>About us</Link>
           </Links>
         </LinkItem>
-        <LinkItem>
+        {/* <LinkItem>
           <Links style={{ textDecoration: "none", color: "#000" }}>
             <Link href="/">Academics</Link>
           </Links>
@@ -59,7 +59,7 @@ export function NavLinks(props) {
           <Links style={{ textDecoration: "none", color: "#000" }}>
             <Link href="/">Courses</Link>
           </Links>
-        </LinkItem>
+        </LinkItem> */}
         <LinkItem>
           <Links
             to="/contactus"

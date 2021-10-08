@@ -140,7 +140,7 @@ const StyledInputFile = styled.input`
   }
 `;
 
-const ApplicationForm = () => {
+const PostJainOnline = () => {
   const [name, pickName] = useState("");
   const [email, pickEmail] = useState("");
   const [mobile, pickMobile] = useState("");
@@ -195,7 +195,7 @@ const ApplicationForm = () => {
       <GlobalStyle />
       <StyledFormWrapper>
         <StyledForm>
-          <h5>Application Form</h5>
+          <h5>Jain Online </h5>
           <hr style={{ background: "#F1C21B", height: "2px" }} />
           <StyledInput
             type="text"
@@ -275,12 +275,12 @@ const ApplicationForm = () => {
             value={address}
             onChange={(e) => pickAddress(e.target.value)}
           />
-          <StyledInputFile
+          {/* <StyledInputFile
             type="file"
             placeholder="Percentage"
             value={percentage}
             onChange={(e) => pickPercentage(e.target.value)}
-          />
+          /> */}
           <StyledError>{/* <p>Error message here</p> */}</StyledError>
           <StyledButton onClick={Submit}>Submit</StyledButton>
           {/* {loading ? (
@@ -306,4 +306,4 @@ const ApplicationForm = () => {
   );
 };
 
-export default ApplicationForm;
+export default PostJainOnline;

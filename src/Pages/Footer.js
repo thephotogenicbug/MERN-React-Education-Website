@@ -9,11 +9,20 @@ const Footer = () => {
             <div className="md-5">
               <h4 className="text-2xl pb-4">EDUPROV</h4>
               <p className="text-gray-300">
-                <strong>Address :</strong> No 20 2nd Floor Lady Curzon Rd Santha
+                <strong>Head Office :</strong> No 20 2nd Floor Lady Curzon Rd Santha
                 Complex, Lady Curzon Rd, Infantry Rd, Bengaluru Karnataka 560001
                 <br />
                 <br />
                 <strong>Phone :</strong> +91 80 25591146 <br />
+                <strong>Email :</strong> admin@eduprov.com
+                <br />
+                <hr />
+              </p>
+              <p className="text-gray-300">
+                <strong>Branch Office :</strong> N.E Blaine Minnesota USA 55434
+                <br />
+                <br />
+                <strong>Phone :</strong> (+1) 651 967 7789<br />
                 <strong>Email :</strong> admin@eduprov.com
                 <br />
               </p>

@@ -12,6 +12,8 @@ import SinghaniaUniversity from "./Pages/SinghaniaUniversity";
 import FeesData from "./Pages/FeesData";
 import Footer from "./Pages/Footer";
 import ApplicationForm from "./Pages/ApplicationForm";
+import PostJainOnline from "./Pages/PostJainOnline";
+import PostJainDistance from "./Pages/PostJainDistance";
 
 function App() {
   return (
@@ -19,13 +21,15 @@ function App() {
       <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/blog/:slug" component={Blog} />
-      {/* <Route exact path="/jainuniversity" component={JainUniversity} /> */}
+      <Route exact path="/jainuniversity" component={JainUniversity} />
       <Route exact path='/annamalaiuniversity' component={AnnamalaiUniversity} />
       <Route exact path='/singhaniaUniversity' component={SinghaniaUniversity} />
       <Route exact path='/fees/:id' component ={FeesData} />
       <Route exact path="/contactus" component={ContactUs} />
       <Route exact path="/about" component={About} />
       <Route exact path='/application' component={ApplicationForm} />
+      <Route exact path="/postjainonline" component={PostJainOnline} />
+      <Route exact path="/postjaindistance" component={PostJainDistance} />
       <Footer />
     </BrowserRouter>
   );

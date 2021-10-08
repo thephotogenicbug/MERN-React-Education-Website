@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import client from "../client";
-import BlockContent from "@sanity/block-content-to-react";
 
 const JainUniversity = () => {
 
@@ -37,13 +35,13 @@ const JainUniversity = () => {
                   athletics, world university rankings to international
                   recognitions.
                 </p>
-                <label>Our Vision</label>
+                <label><b>Our Vision</b></label>
                 <br />
                 <p>
                   To foster human development through excellence in Quality
                   Education, Research and Entrepreneurial Development
                 </p>
-                <label>Our Mission</label>
+                <label><b>Our Mission</b></label>
                 <ul>
                   <li>
                     To provide quality education, creating human Assets /
@@ -64,7 +62,7 @@ const JainUniversity = () => {
                     quality of life.
                   </li>
                 </ul>
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-md-12 text-center">
                     <h2 className="universities_card_title">
                       Distance Learning Course
@@ -98,7 +96,7 @@ const JainUniversity = () => {
                       <th></th>
                     </tr>
                   </table>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

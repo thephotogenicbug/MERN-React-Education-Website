@@ -4,6 +4,7 @@ import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 
 const RegisterButton = styled.button`
@@ -43,6 +44,10 @@ const SinghaniaUniversity = () => {
 
   return (
     <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div className="container-fluid mt-3">
         <div className="row">
           <div className="col-md-12">
@@ -174,17 +179,10 @@ const SinghaniaUniversity = () => {
                 </button>
               </div>
 
-              <div className="modal-body">
-               
-              
-              </div>
+              <div className="modal-body"></div>
 
               <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-primary btn-sm"
-                 
-                >
+                <button type="button" className="btn btn-primary btn-sm">
                   Update Now
                 </button>
                 <button

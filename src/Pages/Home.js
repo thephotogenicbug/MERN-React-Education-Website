@@ -6,6 +6,7 @@ import Jain from "../Components/assets/Jain.jpg";
 import Singhania from "../Components/assets/singhania.jpg";
 import Annamalai from "../Components/assets/annamalai.jpg";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const RegisterButton = styled.button`
   border: 0;
@@ -76,6 +77,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <section className="homepage_section">
         <div className="container">
           <div className="row">
@@ -156,10 +161,10 @@ const Home = () => {
         <div className="row mt-5">
           <div className="col-md-12">
             <main>
-            <h2 className="one">
-              <span>Top Distance Learning Universities</span>
-            </h2>
-          </main>
+              <h2 className="one">
+                <span>Top Distance Learning Universities</span>
+              </h2>
+            </main>
           </div>
         </div>
       </div>

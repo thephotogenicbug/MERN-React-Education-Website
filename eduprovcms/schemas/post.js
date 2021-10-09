@@ -14,6 +14,12 @@ export default {
       type: "string",
     },
     {
+      title: "Keywords",
+      name: "keywords",
+      type: "array",
+      of: [{type: "string"}]
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",

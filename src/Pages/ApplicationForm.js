@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -192,6 +193,10 @@ const ApplicationForm = () => {
 
   return (
     <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <GlobalStyle />
       <StyledFormWrapper>
         <StyledForm>

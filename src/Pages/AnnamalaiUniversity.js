@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
+import { Helmet } from "react-helmet";
 
 const AnnamalaiUniversity = () => {
   const [dataitem, updateData] = useState([]);

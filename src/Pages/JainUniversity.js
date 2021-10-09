@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Helmet } from "react-helmet";
 
 const JainUniversity = () => {
 
 
   return (
     <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div className="container-fluid mt-3">
         <div className="row">
           <div className="col-md-12">
@@ -35,13 +40,17 @@ const JainUniversity = () => {
                   athletics, world university rankings to international
                   recognitions.
                 </p>
-                <label><b>Our Vision</b></label>
+                <label>
+                  <b>Our Vision</b>
+                </label>
                 <br />
                 <p>
                   To foster human development through excellence in Quality
                   Education, Research and Entrepreneurial Development
                 </p>
-                <label><b>Our Mission</b></label>
+                <label>
+                  <b>Our Mission</b>
+                </label>
                 <ul>
                   <li>
                     To provide quality education, creating human Assets /

@@ -1,9 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import AboutImg from "../Components/assets/about.png";
 import aboutLogo from "../Components/assets/about_logo.png";
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <section>
         <div className="Img"></div>
       </section>

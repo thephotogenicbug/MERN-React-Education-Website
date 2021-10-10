@@ -78,7 +78,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>My Title</title>
+        <title>Eduprov Distance Education In Bangalore</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
       <section className="homepage_section">
@@ -139,8 +139,8 @@ const Home = () => {
               {posts.map((post, index) => {
                 return (
                   <div
-                    className="card homepage_cards"
-                    style={{ width: "18rem", margin: "2%" }}
+                    className="card homepage_cards_course"
+                    style={{ width: "19rem", margin: "1%" }}
                     key={index}
                   >
                     <img src={post.mainImage.asset.url} alt={post.title} />
@@ -148,7 +148,7 @@ const Home = () => {
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.shortdescription}</p>
                       <Link to={`/blog/${post.slug.current}`}>
-                        <RegisterButton></RegisterButton>
+                        <RegisterButton>Read Article</RegisterButton>
                       </Link>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div
                   className="card homepage_cards"
-                  style={{ width: "20rem", margin: "1%" }}
+                  style={{ width: "19rem", margin: "1%" }}
                 >
                   <img src={Jain} alt="Jain University" />
                   <div className="card-body">
@@ -195,7 +195,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div
                   className="card homepage_cards"
-                  style={{ width: "20rem", margin: "1%" }}
+                  style={{ width: "19rem", margin: "1%" }}
                 >
                   <img src={Singhania} alt="Singhania University" />
                   <div className="card-body">
@@ -215,7 +215,7 @@ const Home = () => {
               <div className="col-md-4">
                 <div
                   className="card homepage_cards"
-                  style={{ width: "20rem", margin: "1%", height: "24.3rem" }}
+                  style={{ width: "19rem", margin: "1%", height: "24.3rem" }}
                 >
                   <img src={Annamalai} alt="Singhania University" />
                   <div className="card-body">

@@ -156,7 +156,8 @@ const PostJainOnline = () => {
 
   const Submit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/jainonline/createjainonline";
+    const url =
+      "https://distance-api-url.herokuapp.com/jainonline/createjainonline";
     const input = {
       name,
      specialization,

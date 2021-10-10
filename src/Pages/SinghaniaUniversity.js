@@ -32,7 +32,7 @@ const SinghaniaUniversity = () => {
   const getData = () => {
     const url =
       // "https://distance-api-url.herokuapp.com/applicationform/getsinghaniauniversity";
-      "http://localhost:5000/applicationform/getsinghaniauniversity";
+      "https://distance-api-url.herokuapp.com/applicationform/getsinghaniauniversity";
     fetch(url)
       .then((response) => response.json())
       .then((result) => updateData(result));
@@ -45,10 +45,10 @@ const SinghaniaUniversity = () => {
   return (
     <>
       <Helmet>
-        <title>My Title</title>
+        <title>Singhania University</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <div className="container-fluid mt-3">
+      <div className="container mt-3">
         <div className="row">
           <div className="col-md-12">
             <div className="card blog_card-banner_title">

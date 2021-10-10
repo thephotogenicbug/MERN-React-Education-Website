@@ -155,7 +155,8 @@ const PostJainDistance = () => {
 
   const Submit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/jaindistance/createjaindistance";
+    const url =
+      "https://distance-api-url.herokuapp.com/jaindistance/createjaindistance";
     const input = {
       name,
       duration,

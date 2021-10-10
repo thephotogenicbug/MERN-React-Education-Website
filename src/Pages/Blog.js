@@ -35,7 +35,7 @@ const Blog = () => {
       {isLoading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className="container-fluid mt-4">
+        <div className="container mt-4 ">
           <div className="row">
             {/* <div className="col-md-3"></div> */}
             {/* <div className="col-md-6">
@@ -78,7 +78,7 @@ const Blog = () => {
             </div>
           </div>
           <div className="row mb-5">
-            <div className="col-md-12"></div>
+            <div className="col-md-12 mb-5"></div>
           </div>
         </div>
       )}

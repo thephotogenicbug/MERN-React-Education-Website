@@ -10,7 +10,7 @@ const ContactUs = () => {
   const [message, pickMessage] = useState("");
 
   const Submit = () => {
-    const url = "http://localhost:5000/contact/contactform";
+    const url = "https://distance-api-url.herokuapp.com/contact/contactform";
     const input = { name, email, mobile, choose, message };
     axios.post(url, input).then((response) => {
       pickName("");
@@ -24,7 +24,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>My Title</title>
+        <title>Contact us</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
       <div className="container">

@@ -4,14 +4,14 @@ import { Helmet } from "react-helmet";
 
 const JainUniversity = () => {
 
-
+// https://distance-api-url.herokuapp.com/
   return (
     <>
       <Helmet>
-        <title>My Title</title>
+        <title>Jain University</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <div className="container-fluid mt-3">
+      <div className="container mt-3">
         <div className="row">
           <div className="col-md-12">
             <div className="card blog_card-banner_title">

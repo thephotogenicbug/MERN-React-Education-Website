@@ -19,7 +19,7 @@ const FeeData = ({ match }) => {
   useEffect(() => {
     const fetch = async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/applicationform/getsinghaniauniversity/${match.params.id}`
+        `https://distance-api-url.herokuapp.com/applicationform/getsinghaniauniversity/${match.params.id}`
       );
       processCourse(data.course);
       processEligibility(data.eligibility);

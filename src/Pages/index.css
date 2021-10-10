@@ -144,6 +144,6 @@ a.bt {
   }
   .homepage_about {
     background-color: #0b3f64;
-    height: 500px;
+    height: auto;
   }
 }

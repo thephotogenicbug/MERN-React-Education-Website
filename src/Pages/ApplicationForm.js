@@ -155,10 +155,15 @@ const ApplicationForm = () => {
   const [passingyear, pickPassingyear] = useState("");
   const [percentage, pickPercentage] = useState("");
   const [address, pickAddress] = useState("");
+  const [pic, setPic] = useState(
+    "https://res.cloudinary.com/dv5jjlsd7/image/upload/v1631444571/user_1_qy7hlx.png"
+  );
+  const [picmessage, setPicMessage] = useState("");
 
   const Submit = (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/application/applicationform";
+    const url =
+      "https://distance-api-url.herokuapp.com/application/applicationform";
     const input = {
       name,
       email,
@@ -173,6 +178,7 @@ const ApplicationForm = () => {
       passingyear,
       percentage,
       address,
+      pic,
     };
     axios.post(url, input).then((response) => {
       pickName("");
@@ -188,7 +194,37 @@ const ApplicationForm = () => {
       pickPassingyear("");
       pickPercentage("");
       pickAddress("");
+      setPic("");
     });
+  };
+
+  const postDetails = (pics) => {
+    if (
+      pics ===
+      "https://res.cloudinary.com/dv5jjlsd7/image/upload/v1631444571/user_1_qy7hlx.png"
+    ) {
+      return setPicMessage("Please Select an Image");
+    }
+    setPicMessage(null);
+    if (pics.type === "image/jpeg" || pics.type === "image/png") {
+      const data = new FormData();
+      data.append("file", pics);
+      data.append("upload_preset", "noteszipper");
+      data.append("cloud_name", "dv5jjlsd7");
+      fetch("https://api.cloudinary.com/v1_1/dv5jjlsd7/image/upload", {
+        method: "post",
+        body: data,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setPic(data.url.toString());
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      return setPicMessage("Please Select an Image");
+    }
   };
 
   return (
@@ -282,9 +318,8 @@ const ApplicationForm = () => {
           />
           <StyledInputFile
             type="file"
-            placeholder="Percentage"
-            value={percentage}
-            onChange={(e) => pickPercentage(e.target.value)}
+            placeholder="File"
+            onChange={(e) => postDetails(e.target.files[0])}
           />
           <StyledError>{/* <p>Error message here</p> */}</StyledError>
           <StyledButton onClick={Submit}>Submit</StyledButton>

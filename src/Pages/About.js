@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>My Title</title>
+        <title>About us</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
       <section>

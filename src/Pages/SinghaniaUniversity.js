@@ -48,7 +48,7 @@ const SinghaniaUniversity = () => {
         <title>Singhania University</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <div className="container mt-3">
+      <div className="container-fluid mt-3">
         <div className="row">
           <div className="col-md-12">
             <div className="card blog_card-banner_title">
@@ -131,7 +131,7 @@ const SinghaniaUniversity = () => {
                   </div>
                   {dataitem.map((data) => {
                     return (
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <div className="card m-2 universities_card_annamalai">
                           <div className="card-body universities_card_course_title_annamalai">
                             <h5>{data.course}</h5>

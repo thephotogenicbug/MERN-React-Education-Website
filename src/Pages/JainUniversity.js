@@ -1,17 +1,58 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const RegisterButton = styled.button`
+  border: 0;
+  width: 120px;
+  outline: 0;
+  padding: 8px 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  background-color: #0b3f64;
+  transition: all 240ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #0b3f64;
+  }
+  &:not(:last-of-type) {
+    margin-right: 6px;
+  }
+`;
 
 const JainUniversity = () => {
+  const [getdata, setGetData] = useState([]);
+  const [getonlinedata, setGetOnlineData] = useState([]);
 
-// https://distance-api-url.herokuapp.com/
+  const FetchData = () => {
+    fetch("http://localhost:5000/jaindistance/getjaindistance")
+      .then((response) => response.json())
+      .then((result) => setGetData(result));
+  };
+
+  const FetchOnlineData = () => {
+    fetch("http://localhost:5000/jainonline/getjainonline")
+      .then((response) => response.json())
+      .then((result) => setGetOnlineData(result));
+  };
+
+  useEffect(() => {
+    FetchData();
+    FetchOnlineData();
+  });
+
+  // https://distance-api-url.herokuapp.com/
   return (
     <>
       <Helmet>
         <title>Jain University</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
-      <div className="container mt-3">
+      <div className="container-fluid mt-3">
         <div className="row">
           <div className="col-md-12">
             <div className="card blog_card-banner_title">
@@ -71,41 +112,67 @@ const JainUniversity = () => {
                     quality of life.
                   </li>
                 </ul>
-                {/* <div className="row">
+                <div className="row">
                   <div className="col-md-12 text-center">
                     <h2 className="universities_card_title">
                       Distance Learning Course
                     </h2>
                     <hr style={{ background: "#F1C21B", height: "2px" }} />
                   </div>
-                  <div className="col-md-3">
-                    <div className="card">
-                      <div className="card-body universities_card_course_title"></div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-3">
-                    <div className="card">
-                      <div className="card-body universities_card_course_title"></div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-3"></div>
-
-                  <div className="col-md-3"></div>
-                  <div className="col-md-3"></div>
+                  {getdata.map((data) => {
+                    return (
+                      <div className="col-md-6">
+                        <div className="card m-2 universities_card_annamalai">
+                          <div className="card-body universities_card_course_title_annamalai">
+                            <h5>{data.name}</h5>
+                          </div>
+                          <div className="universities_specs">
+                            <h6 className="text-center">{data.spec}</h6>
+                          </div>
+                          <div className="text-center  mb-3">
+                            <Link
+                              to={`/jaindistancefees/${data._id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <RegisterButton>Fees Structure</RegisterButton>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
                 <hr style={{ background: "#F1C21B", height: "2px" }} />
                 <div className="row">
-                  <h3 className="text-center universities_card_title">
-                    Distance Education Fee Structure
-                  </h3>
-                  <table className="table table-sm table-bordered">
-                    <tr>
-                      <th></th>
-                    </tr>
-                  </table>
-                </div> */}
+                  <div className="col-md-12 text-center">
+                    <h3 className="universities_card_title">
+                      Online Learning Course
+                    </h3>
+                    <hr style={{ background: "#F1C21B", height: "2px" }} />
+                  </div>
+                  {getonlinedata.map((data) => {
+                    return (
+                      <div className="col-md-6">
+                        <div className="card m-2 universities_card_annamalai">
+                          <div className="card-body universities_card_course_title_annamalai">
+                            <h5>{data.name}</h5>
+                          </div>
+                          <div className="universities_specs">
+                            <h6 className="text-center">{data.spec}</h6>
+                          </div>
+                          <div className="text-center  mb-3">
+                            <Link
+                              to={`/jainonlinefees/${data._id}`}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <RegisterButton>Fees Structure</RegisterButton>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

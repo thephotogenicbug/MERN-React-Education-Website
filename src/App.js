@@ -18,6 +18,7 @@ import JainDistanceData from "./Pages/JainDistanceData";
 import JainOnlineData from "./Pages/JainOnlineData";
 import Dashboard from "./Pages/Visitors/Dashboard";
 import NewVisitor from "./Pages/Visitors/NewVisitor";
+import Visitors from "./Pages/Visitors/Visitors";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Route exact path="/postjaindistance" component={PostJainDistance} />
       <Route exact path='/visitor/dashboard' component={Dashboard} />
       <Route exact path = '/visitor/newvisitor' component={NewVisitor} />
+      <Route exact path="/visitor/allvisitor" component={Visitors} />
       {/* <Footer /> */}
     </BrowserRouter>
   );

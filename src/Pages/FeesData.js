@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import axios from "axios";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const FeeData = ({ match }) => {
   const params = useParams();
@@ -38,6 +40,7 @@ const FeeData = ({ match }) => {
 
   return (
     <>
+    <Navbar/>
       <div className="container-fluid mt-2 mb-3">
         <div className="row">
           <div className="col-md-3"></div>
@@ -91,6 +94,7 @@ const FeeData = ({ match }) => {
           <div className="col-md-3"></div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

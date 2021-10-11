@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 const Blog = () => {
   const [singlePost, setSinglePost] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +34,7 @@ const Blog = () => {
 
   return (
     <>
+    <Navbar/>
       {isLoading ? (
         <h1>Loading...</h1>
       ) : (
@@ -82,6 +85,7 @@ const Blog = () => {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 };

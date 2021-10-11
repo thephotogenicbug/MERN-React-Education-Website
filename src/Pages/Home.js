@@ -7,6 +7,8 @@ import Singhania from "../Components/assets/singhania.jpg";
 import Annamalai from "../Components/assets/annamalai.jpg";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const RegisterButton = styled.button`
   border: 0;
@@ -77,6 +79,7 @@ const Home = () => {
 
   return (
     <>
+    <Navbar />
       <Helmet>
         <title>Eduprov Distance Education In Bangalore</title>
         <meta name="description" content="Helmet application" />
@@ -265,6 +268,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

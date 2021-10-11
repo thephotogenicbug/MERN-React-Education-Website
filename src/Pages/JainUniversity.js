@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const RegisterButton = styled.button`
   border: 0;
@@ -48,6 +50,7 @@ const JainUniversity = () => {
   // https://distance-api-url.herokuapp.com/
   return (
     <>
+    <Navbar/> 
       <Helmet>
         <title>Jain University</title>
         <meta name="description" content="Helmet application" />
@@ -178,6 +181,7 @@ const JainUniversity = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

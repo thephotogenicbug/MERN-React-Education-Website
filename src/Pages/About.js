@@ -2,9 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import AboutImg from "../Components/assets/about.png";
 import aboutLogo from "../Components/assets/about_logo.png";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 const About = () => {
   return (
     <>
+    <Navbar />
       <Helmet>
         <title>About us</title>
         <meta name="description" content="Helmet application" />
@@ -66,6 +69,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

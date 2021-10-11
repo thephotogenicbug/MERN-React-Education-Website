@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import styled, { createGlobalStyle, css } from "styled-components";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const GlobalStyle = createGlobalStyle`
  html {
@@ -180,6 +182,7 @@ const PostJainOnline = () => {
 
   return (
     <>
+    <Navbar />
       <GlobalStyle />
       <StyledFormWrapper>
         <StyledForm>
@@ -248,6 +251,7 @@ const PostJainOnline = () => {
         </StyledForm>
       </StyledFormWrapper>
       <StyledBottom></StyledBottom>
+      <Footer />
     </>
   );
 };

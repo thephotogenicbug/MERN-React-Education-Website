@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import { Helmet } from "react-helmet";
+import Footer from "./Footer";
+import { Navbar } from "../Components/Navbar";
 
 const AnnamalaiUniversity = () => {
   const [dataitem, updateData] = useState([]);
@@ -20,6 +22,7 @@ const AnnamalaiUniversity = () => {
 
   return (
     <>
+      <Navbar />
       <div className="container mt-3">
         <div className="row">
           <div className="col-md-12">
@@ -165,6 +168,7 @@ const AnnamalaiUniversity = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

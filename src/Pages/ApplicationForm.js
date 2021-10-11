@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle, css } from "styled-components";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const GlobalStyle = createGlobalStyle`
  html {
@@ -229,6 +231,7 @@ const ApplicationForm = () => {
 
   return (
     <>
+    <Navbar />
       <Helmet>
         <title>My Title</title>
         <meta name="description" content="Helmet application" />
@@ -342,6 +345,7 @@ const ApplicationForm = () => {
         </StyledForm>
       </StyledFormWrapper>
       <StyledBottom></StyledBottom>
+      <Footer/> 
     </>
   );
 };

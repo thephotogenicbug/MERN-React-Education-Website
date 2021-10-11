@@ -66,7 +66,7 @@ export function MobileNavLinks(props) {
               <Link>About us</Link>
             </Links>
           </LinkItem>
-          <LinkItem>
+          {/* <LinkItem>
             <Links style={{ textDecoration: "none", color: "#000" }}>
               <Link href="/">Academics</Link>
             </Links>
@@ -75,7 +75,7 @@ export function MobileNavLinks(props) {
             <Links style={{ textDecoration: "none", color: "#000" }}>
               <Link href="/">Courses</Link>
             </Links>
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem>
             <Links
               to="/contactus"

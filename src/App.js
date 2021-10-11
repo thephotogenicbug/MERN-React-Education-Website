@@ -16,11 +16,13 @@ import PostJainOnline from "./Pages/PostJainOnline";
 import PostJainDistance from "./Pages/PostJainDistance";
 import JainDistanceData from "./Pages/JainDistanceData";
 import JainOnlineData from "./Pages/JainOnlineData";
+import Dashboard from "./Pages/Visitors/Dashboard";
+import NewVisitor from "./Pages/Visitors/NewVisitor";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Route exact path="/" component={Home} />
       <Route exact path="/blog/:slug" component={Blog} />
       <Route exact path="/jainuniversity" component={JainUniversity} />
@@ -35,7 +37,9 @@ function App() {
       <Route exact path='/application' component={ApplicationForm} />
       <Route exact path="/postjainonline" component={PostJainOnline} />
       <Route exact path="/postjaindistance" component={PostJainDistance} />
-      <Footer />
+      <Route exact path='/visitor/dashboard' component={Dashboard} />
+      <Route exact path = '/visitor/newvisitor' component={NewVisitor} />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

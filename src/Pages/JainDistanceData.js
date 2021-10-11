@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 const JainDistanceData = ({ match }) => {
   const [name, SetName] = useState("");
@@ -32,6 +34,7 @@ const JainDistanceData = ({ match }) => {
 
   return (
     <>
+    <Navbar />
       <div className="container-fluid mt-2 mb-3">
         <div className="row">
           <div className="col-md-3"></div>
@@ -85,6 +88,7 @@ const JainDistanceData = ({ match }) => {
           <div className="col-md-3"></div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

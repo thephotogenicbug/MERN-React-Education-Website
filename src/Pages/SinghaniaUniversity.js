@@ -5,6 +5,8 @@ import BlockContent from "@sanity/block-content-to-react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 
 
 const RegisterButton = styled.button`
@@ -44,6 +46,7 @@ const SinghaniaUniversity = () => {
 
   return (
     <>
+    <Navbar />
       <Helmet>
         <title>Singhania University</title>
         <meta name="description" content="Helmet application" />
@@ -197,6 +200,7 @@ const SinghaniaUniversity = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

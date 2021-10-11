@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ContactImg from "../Components/assets/contact.png";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { Navbar } from "../Components/Navbar";
+import Footer from "./Footer";
 const ContactUs = () => {
   const [name, pickName] = useState("");
   const [email, pickEmail] = useState("");
@@ -23,6 +25,7 @@ const ContactUs = () => {
 
   return (
     <>
+    <Navbar />
       <Helmet>
         <title>Contact us</title>
         <meta name="description" content="Helmet application" />
@@ -120,6 +123,7 @@ const ContactUs = () => {
           <div className="col-md-6"></div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

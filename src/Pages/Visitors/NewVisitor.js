@@ -190,7 +190,7 @@ const NewVisitor = () => {
             <SelectDownDownOptions>Farzana</SelectDownDownOptions>
             <SelectDownDownOptions>Shaik Rafiq</SelectDownDownOptions>
             <SelectDownDownOptions>Sidra</SelectDownDownOptions>
-            <SelectDownDownOptions>Sufiya Kouser</SelectDownDownOptions>
+            {/* <SelectDownDownOptions>Sufiya Kouser</SelectDownDownOptions> */}
             <SelectDownDownOptions>Sufiya</SelectDownDownOptions>
             <SelectDownDownOptions>Tasmiya</SelectDownDownOptions>
             <SelectDownDownOptions>Uzma</SelectDownDownOptions>

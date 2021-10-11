@@ -14,7 +14,6 @@ const Container = styled.div`
 `;
 const CardContent = styled.div`
   height: max-content;
- 
 `;
 const CardData = styled.div`
   display: flex;
@@ -22,7 +21,6 @@ const CardData = styled.div`
   justify-content: space-around;
   margin: 0.4rem;
   padding-top: 0.6rem;
-  
 `;
 const CardInfo = styled.div`
   display: flex;
@@ -67,11 +65,11 @@ const StyledButton = styled.button`
 
 const SearchContainer = styled.div`
   height: 5rem;
-  display: flex ;
+  display: flex;
 `;
 const StyledInput = styled.input`
   background-color: aliceblue;
-  width: 20rem;
+  width: 16rem;
   height: 3rem;
   border: none;
   border-top-right-radius: 0.5rem;

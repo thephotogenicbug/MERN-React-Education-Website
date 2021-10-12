@@ -15,8 +15,9 @@ export const createVisitorAction =
       dispatch({
         type: VISITOR_CREATE_REQUEST,
       });
-
+      
       const {} = getState();
+      
       const { data } = await axios.post(
         `https://distance-api-url.herokuapp.com/visitor/createvisitor`,
         { name, email, mobile, options, purpose, pic }

@@ -17,7 +17,7 @@ const JainOnlineData = ({match}) => {
       useEffect(() => {
         const fetch = async () => {
           const { data } = await axios.get(
-            `http://localhost:5000/jainonline/getjainonline/${match.params.id}`
+            `https://distance-api-url.herokuapp.com/jainonline/getjainonline/${match.params.id}`
           );
           SetName(data.name);
           SetSpecialization(data.specialization)

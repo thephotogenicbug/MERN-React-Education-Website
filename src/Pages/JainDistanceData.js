@@ -17,7 +17,7 @@ const JainDistanceData = ({ match }) => {
   useEffect(() => {
     const fetch = async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/jaindistance/getjaindistance/${match.params.id}`
+        `https://distance-api-url.herokuapp.com/jaindistance/getjaindistance/${match.params.id}`
       );
       SetName(data.name);
       SetDuration(data.duration);

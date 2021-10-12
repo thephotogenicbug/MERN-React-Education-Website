@@ -31,13 +31,15 @@ const JainUniversity = () => {
   const [getonlinedata, setGetOnlineData] = useState([]);
 
   const FetchData = () => {
-    fetch("http://localhost:5000/jaindistance/getjaindistance")
+    fetch(
+      "https://distance-api-url.herokuapp.com/jaindistance/getjaindistance"
+    )
       .then((response) => response.json())
       .then((result) => setGetData(result));
   };
 
   const FetchOnlineData = () => {
-    fetch("http://localhost:5000/jainonline/getjainonline")
+    fetch("https://distance-api-url.herokuapp.com/jainonline/getjainonline")
       .then((response) => response.json())
       .then((result) => setGetOnlineData(result));
   };

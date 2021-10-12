@@ -131,6 +131,9 @@ const Visitors = ({search}) => {
             else if (visitor.options.toLowerCase().includes(searchTerm.toLowerCase())){
               return visitor
             }
+            else if (visitor.createdAt.toLowerCase().includes(searchTerm.toLowerCase())){
+              return visitor
+            }
           }).map((visitor) => {
             return (
               <CardData>
@@ -141,6 +144,7 @@ const Visitors = ({search}) => {
                   <TextContainer>
                     <Title>{visitor.name}</Title>
                     <SubTitle>{visitor.options}</SubTitle>
+                    <SubTitle> {visitor.createdAt.substring(0, 10)}</SubTitle>
                   </TextContainer>
                 </CardInfo>
                 <ButtonContainer>

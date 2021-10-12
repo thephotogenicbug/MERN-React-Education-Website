@@ -16,8 +16,8 @@ export const createVisitorAction =
        const {
 
        } = getState()
-      const  {data}  = await axios.post(
-        `http://localhost:5000/visitor/createvisitor`,
+      const { data } = await axios.post(
+        `https://distance-api-url.herokuapp.com/visitor/createvisitor`,
         { name, email, mobile, options, purpose, pic }
       );
 

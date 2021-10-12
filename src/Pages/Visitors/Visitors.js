@@ -3,6 +3,9 @@ import axios from "axios";
 import styled from "styled-components";
 import AvatarImg from "./profile.png";
 import { FiSearch } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { listVisitor } from "../../actions/visitorActions";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 43rem;
@@ -93,7 +96,21 @@ const Icon = styled.div`
   }
 `;
 
-const Visitors = () => {
+const Visitors = ({search}) => {
+
+ const [searchTerm, setSearchTerm] = useState("");
+
+  const dispatch = useDispatch();
+
+  const visitorList = useSelector((state) => state.visitorList);
+  const { loading, visitors, error } = visitorList;
+
+  console.log(visitors);
+
+  useEffect(() => {
+    dispatch(listVisitor());
+  }, [dispatch]);
+
   return (
     <>
       <Container>
@@ -101,10 +118,43 @@ const Visitors = () => {
           <Icon>
             <FiSearch />
           </Icon>
-          <StyledInput type="text" placeholder="Search..." />
+          <StyledInput type="text" placeholder="Search..." onChange={e => {setSearchTerm(e.target.value)}} />
         </SearchContainer>
         <CardContent>
-          <CardData>
+          {visitors?.filter((visitor) =>{
+            if(searchTerm == "") {
+              return visitor
+            }
+            else if (visitor.name.toLowerCase().includes(searchTerm.toLowerCase())){
+              return visitor
+            }
+            else if (visitor.options.toLowerCase().includes(searchTerm.toLowerCase())){
+              return visitor
+            }
+          }).map((visitor) => {
+            return (
+              <CardData>
+                <CardInfo>
+                  <Avatar>
+                    <img src={visitor.pic} />
+                  </Avatar>
+                  <TextContainer>
+                    <Title>{visitor.name}</Title>
+                    <SubTitle>{visitor.options}</SubTitle>
+                  </TextContainer>
+                </CardInfo>
+                <ButtonContainer>
+                  <Link
+                    to={`view/${visitor._id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <StyledButton>View</StyledButton>
+                  </Link>
+                </ButtonContainer>
+              </CardData>
+            );
+          })}
+          {/* <CardData>
             <CardInfo>
               <Avatar>
                 <img src={AvatarImg} />
@@ -117,21 +167,7 @@ const Visitors = () => {
             <ButtonContainer>
               <StyledButton>View</StyledButton>
             </ButtonContainer>
-          </CardData>
-          <CardData>
-            <CardInfo>
-              <Avatar>
-                <img src={AvatarImg} />
-              </Avatar>
-              <TextContainer>
-                <Title>Naveen</Title>
-                <SubTitle>Counseling</SubTitle>
-              </TextContainer>
-            </CardInfo>
-            <ButtonContainer>
-              <StyledButton>View</StyledButton>
-            </ButtonContainer>
-          </CardData>
+          </CardData> */}
         </CardContent>
       </Container>
     </>

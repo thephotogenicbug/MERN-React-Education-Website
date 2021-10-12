@@ -114,7 +114,13 @@ const NewVisitor = () => {
   const SubmitHandler = (e) => {
     e.preventDefault();
     dispatch(createVisitorAction(name, email, mobile, purpose, options, pic));
-    setMessage("Data Saved Successfully... !");
+    setMessage("Data Saved Successfully... !")
+    setName("")
+    setMobile("")
+    setEmail("")
+    setPurpose("")
+    setOptions("")
+    setPic("")
     if (!name || !email || !mobile || !purpose || !options) return setMessage("Please fill all the fields");
   };
 
@@ -190,7 +196,6 @@ const NewVisitor = () => {
             <SelectDownDownOptions>Farzana</SelectDownDownOptions>
             <SelectDownDownOptions>Shaik Rafiq</SelectDownDownOptions>
             <SelectDownDownOptions>Sidra</SelectDownDownOptions>
-            {/* <SelectDownDownOptions>Sufiya Kouser</SelectDownDownOptions> */}
             <SelectDownDownOptions>Sufiya</SelectDownDownOptions>
             <SelectDownDownOptions>Tasmiya</SelectDownDownOptions>
             <SelectDownDownOptions>Uzma</SelectDownDownOptions>

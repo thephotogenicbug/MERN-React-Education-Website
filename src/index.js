@@ -5,7 +5,17 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
+import { render } from "react-snapshot";
 import store from "./store";
+
+// ReactDOM.render(
+ 
+// + render(
+  
+//     <App/>,
+ 
+//     document.getElementById('root')
+//   );
 
 ReactDOM.render(
   <Provider store={store}>

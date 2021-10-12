@@ -16,16 +16,8 @@ const Footer = () => {
                 <strong>Phone :</strong> +91 80 25591146 <br />
                 <strong>Email :</strong> admin@eduprov.com
                 <br />
-                <hr />
               </p>
-              <p className="text-gray-300">
-                <strong>Branch Office :</strong> N.E Blaine Minnesota USA 55434
-                <br />
-                <br />
-                <strong>Phone :</strong> (+1) 651 967 7789<br />
-                <strong>Email :</strong> admin@eduprov.com
-                <br />
-              </p>
+             
             </div>
             <div className="md-5">
               <h4 className="pb-4">Course Links</h4>

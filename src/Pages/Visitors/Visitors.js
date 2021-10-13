@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import styled from "styled-components";
-import AvatarImg from "./profile.png";
 import { FiSearch } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { listVisitor } from "../../actions/visitorActions";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Container = styled.div`
   width: 43rem;
@@ -96,7 +94,7 @@ const Icon = styled.div`
   }
 `;
 
-const Visitors = ({search}) => {
+const Visitors = () => {
 
  const [searchTerm, setSearchTerm] = useState("");
 
@@ -107,9 +105,21 @@ const Visitors = ({search}) => {
 
   console.log(visitors);
 
+  const userLogin = useSelector(state => state.userLogin)
+  const {userInfo} = userLogin;
+
+  const createVisitor = useSelector(state => state.createVisitor)
+  const {success : successCreate} = createVisitor
+
+  const history = useHistory()
+
   useEffect(() => {
     dispatch(listVisitor());
-  }, [dispatch]);
+    if(!userInfo){
+      history.push("/visitor/dashboard");
+    }
+
+  }, [dispatch, history, userInfo, successCreate]);
 
   return (
     <>

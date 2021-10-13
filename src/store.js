@@ -6,12 +6,21 @@ import {
   visitorListReducer,
 } from "./reducers/visitorReducers";
 
+import {userLoginReducer} from './reducers/userReducer'
+
 const reducer = combineReducers({
   createVisitor: visitorCreateReducer,
   visitorList: visitorListReducer,
+  userLogin : userLoginReducer
 });
 
-const initialState = {};
+const userInfoFromStorage = localStorage.getItem("userInfo")
+? JSON.parse(localStorage.getItem("userInfo"))
+: null;
+
+const initialState = {
+  userLogin: {userInfo : userInfoFromStorage}
+};
 
 const middleware = [thunk];
 

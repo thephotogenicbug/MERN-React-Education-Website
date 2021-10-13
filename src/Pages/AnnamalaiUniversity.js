@@ -23,6 +23,49 @@ const AnnamalaiUniversity = () => {
   return (
     <>
       <Navbar />
+      <Helmet>
+        <title>
+          Annamalai University Distance Education in Bangalore | Eduprov
+        </title>
+        <meta
+          name="description"
+          content="Annamalai University, accredited with ‘A’ Grade by NAAC in
+                  2014, is one of India’s largest public residential
+                  universities with 10 Faculties and 49 departments of study.
+                  Sprawling over 950 Acres of land"
+        />
+        <meta name="keywords" content="#" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Annamalai University Distance Education in Bangalore"
+        />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Eduprov Educational Institute" />
+        <meta
+          property="og:description"
+          content=" Annamalai University, accredited with ‘A’ Grade by NAAC in
+                  2014, is one of India’s largest public residential
+                  universities with 10 Faculties and 49 departments of study.
+                  Sprawling over 950 Acres of land"
+        />
+        <meta property="og:image" content="#" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@eduprov" />
+        <meta
+          name="twitter:title"
+          content="Annamalai University Distance Education in Bangalore | Eduprov"
+        />
+        <meta
+          name="twitter:description"
+          content=" Annamalai University, accredited with ‘A’ Grade by NAAC in
+                  2014, is one of India’s largest public residential
+                  universities with 10 Faculties and 49 departments of study.
+                  Sprawling over 950 Acres of land"
+        />
+        <meta name="twitter:image" content="#" />
+        <meta name="twitter:url" content="https://twitter.com/eduprov" />
+      </Helmet>
       <div className="container mt-3">
         <div className="row">
           <div className="col-md-12">
@@ -168,7 +211,7 @@ const AnnamalaiUniversity = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

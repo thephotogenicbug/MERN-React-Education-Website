@@ -25,10 +25,24 @@ const ContactUs = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Helmet>
         <title>Contact us</title>
         <meta name="description" content="Helmet application" />
+        <meta name="description" content="Helmet application" />
+        <meta name="keywords" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Eduprov Educational Institute" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="#" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@eduprov" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="#" />
+        <meta name="twitter:url" content="https://twitter.com/eduprov" />
       </Helmet>
       <div className="container">
         <div className="row">

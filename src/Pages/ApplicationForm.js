@@ -233,7 +233,7 @@ const ApplicationForm = () => {
     <>
     <Navbar />
       <Helmet>
-        <title>My Title</title>
+        <title>Application Form</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
       <GlobalStyle />

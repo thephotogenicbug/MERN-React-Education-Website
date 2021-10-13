@@ -52,10 +52,49 @@ const JainUniversity = () => {
   // https://distance-api-url.herokuapp.com/
   return (
     <>
-    <Navbar/> 
+      <Navbar />
       <Helmet>
-        <title>Jain University</title>
-        <meta name="description" content="Helmet application" />
+        <title>
+          Jain University Distance Education in Bangalore | Eduprov
+        </title>
+        <meta
+          name="description"
+          content="JAIN (Deemed-to-be University) stands tall
+                  and competent addressing grand questions through its
+                  innovative history without compromising on grassroot solutions
+                  and standards."
+        />
+        <meta name="keywords" content="#" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Jain University Distance Education in Bangalore | Eduprov"
+        />
+        <meta property="og:url" content="#" />
+        <meta property="og:site_name" content="Eduprov Educational Institute" />
+        <meta
+          property="og:description"
+          content="JAIN (Deemed-to-be University) stands tall
+                  and competent addressing grand questions through its
+                  innovative history without compromising on grassroot solutions
+                  and standards."
+        />
+        <meta property="og:image" content="#" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@eduprov" />
+        <meta
+          name="twitter:title"
+          content="Jain University Distance Education in Bangalore | Eduprov"
+        />
+        <meta
+          name="twitter:description"
+          content="JAIN (Deemed-to-be University) stands tall
+                  and competent addressing grand questions through its
+                  innovative history without compromising on grassroot solutions
+                  and standards."
+        />
+        <meta name="twitter:image" content="#" />
+        <meta name="twitter:url" content="https://twitter.com/eduprov" />
       </Helmet>
       <div className="container-fluid mt-3">
         <div className="row">
@@ -183,7 +222,7 @@ const JainUniversity = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

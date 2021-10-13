@@ -46,10 +46,49 @@ const SinghaniaUniversity = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Helmet>
-        <title>Singhania University</title>
-        <meta name="description" content="Helmet application" />
+        <title>
+          Singhania University Distance Education in Bangalore | Eduprov
+        </title>
+        <meta
+          name="description"
+          content="Singhania University is situated at Pacheri Bari, Distt.
+                  Jhunjhunu (Rajasthan) on the Delhi-Narnaul Singhana - Pilani
+                  Road. It is about 160 kms. west of Delhi and about 165 kms.
+                  north of Jaipur."
+        />
+        <meta name="keywords" content="#" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Singhania University Distance Education in Bangalore | Eduprov "
+        />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Eduprov Educational Institute" />
+        <meta
+          property="og:description"
+          content=" Singhania University is situated at Pacheri Bari, Distt.
+                  Jhunjhunu (Rajasthan) on the Delhi-Narnaul Singhana - Pilani
+                  Road. It is about 160 kms. west of Delhi and about 165 kms.
+                  north of Jaipur."
+        />
+        <meta property="og:image" content="#" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@eduprov" />
+        <meta
+          name="twitter:title"
+          content="Singhania University Distance Education in Bangalore | Eduprov"
+        />
+        <meta
+          name="twitter:description"
+          content=" Singhania University is situated at Pacheri Bari, Distt.
+                  Jhunjhunu (Rajasthan) on the Delhi-Narnaul Singhana - Pilani
+                  Road. It is about 160 kms. west of Delhi and about 165 kms.
+                  north of Jaipur."
+        />
+        <meta name="twitter:image" content="#" />
+        <meta name="twitter:url" content="https://twitter.com/eduprov" />
       </Helmet>
       <div className="container-fluid mt-3">
         <div className="row">

@@ -129,6 +129,11 @@ body {
   }
 }
 
+.Image_ui {
+  margin-top: 2rem;
+  height: 300px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1080px) {
   .homepage_cards_course {
     margin-left: 45.2px !important;
@@ -137,10 +142,17 @@ body {
     margin-left: 45.2px !important;
   }
   .Img {
-  background-image: url(../src/Components/assets/about.png);
-  height: 210px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    background-image: url(../src/Components/assets/about.png);
+    height: 210px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Image_ui {
+    margin-top: 2rem;
+    height: 200px;
+    display: flex;
+    margin-left: 7.5rem;
+  }
 }

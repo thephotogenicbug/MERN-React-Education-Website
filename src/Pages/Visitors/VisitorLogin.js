@@ -60,37 +60,54 @@ const StyledButton = styled.button`
 `;
 
 const VisitorLogin = () => {
+  const [email, pickEmail] = useState("");
+  const [password, pickPassword] = useState("");
+  const [confirmpassword, pickConfirmPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [email, pickEmail] = useState("")
-  const [password, pickPassword] = useState("")
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
+  const userLogin = useSelector((state) => state.userLogin);
+  const { loading, error, userInfo } = userLogin;
 
-  const userLogin = useSelector(state => state.userLogin)
-  const {loading, error, userInfo} = userLogin
+  const history = useHistory();
 
-  const history = useHistory()
+  useEffect(() => {
+    if (userInfo) {
+      history.push("/visitor/allvisitor");
+    }
+  }, [history, userInfo]);
 
-  useEffect(() =>{
-      if(userInfo){
-        history.push("/visitor/allvisitor");
-      }
-  },[history, userInfo])
+  const submitHandler = async (e) => {
+    e.preventDefault();
 
-  const submitHandler = async (e) =>{
-    e.preventDefault()
+    dispatch(login(email, password));
 
-    dispatch(login(email, password))
-  }
 
+    if (error) {
+      setMessage("Invalid Email or Password");
+    }
+    
+  };
 
   return (
     <StyledFormWrapper>
       <StyledForm>
-          <h5>Login</h5>
-        <StyledInput type="text" placeholder="email" value={email} onChange={e => pickEmail(e.target.value)} />
-        <StyledInput type="text" placeholder="password" value={password} onChange={e => pickPassword(e.target.value)} />
-        <StyledButton onClick={submitHandler} >Login</StyledButton>
+        {message && <p className="text-center"> {message}</p>}
+        <h5>Login</h5>
+        <StyledInput
+          type="text"
+          placeholder="email"
+          value={email}
+          onChange={(e) => pickEmail(e.target.value)}
+        />
+        <StyledInput
+          type="password"
+          placeholder="password"
+          value={password}
+          onChange={(e) => pickPassword(e.target.value)}
+        />
+        <StyledButton onClick={submitHandler}>Login</StyledButton>
       </StyledForm>
     </StyledFormWrapper>
   );

@@ -21,6 +21,7 @@ import NewVisitor from "./Pages/Visitors/NewVisitor";
 import Visitors from "./Pages/Visitors/Visitors";
 import { useState } from "react";
 import VisitorLogin from "./Pages/Visitors/VisitorLogin";
+import SingleVisitor from "./Pages/Visitors/SingleVisitor";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
       <Route exact path = '/visitor/newvisitor' component={NewVisitor} />
       <Route exact path="/visitor/allvisitor" component={Visitors} />
       <Route exact path = "/visitor/login" component={VisitorLogin} />
+      <Route exact path="/visitor/allvisitor/:id" component={SingleVisitor} />
       {/* <Footer /> */}
     </BrowserRouter>
   );

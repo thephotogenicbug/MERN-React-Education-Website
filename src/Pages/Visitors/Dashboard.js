@@ -162,7 +162,7 @@ const Dashboard = () => {
           <MdManageAccounts />
           <StyledText>My Account</StyledText>
         </ContainerBlocks>
-        <Link to="/visitor/allvisitor" style={{ textDecoration: "none" }}>
+        <Link to="/visitor/login" style={{ textDecoration: "none" }}>
           <ContainerBlocks>
             <FiUsers />
             <StyledText>Visitor's Data</StyledText>
